@@ -61,6 +61,8 @@ extension Reducer {
 
 - Action `LifecycleAction<Action>.action(Action)` passes the `Action` to original reducer, if the state is not `nil`. Otherwise it triggers assertion failure (just like an optional reducer does in the same case) and returns `Effect.none`.
 
+- [Check out all changes in the source code](https://github.com/darrarski/tca-ifletstore-effect-cancellation-demo/compare/c7e863b951569e1d1d96dd0930bf4f08ce926b94...solution-lifecycle)
+
 ## Links
 
 - https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272
