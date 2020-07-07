@@ -27,7 +27,12 @@ extension Reducer {
 
             case let .action(action):
                 guard state != nil else {
-                    fatalError()
+                    assertionFailure(
+                        """
+                        Action was received by an optional reducer when its state was "nil".
+                        """
+                    )
+                    return .none
                 }
 
                 return self.run(&state!, action, environment)
