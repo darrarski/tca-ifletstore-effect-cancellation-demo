@@ -65,7 +65,7 @@ extension Reducer {
 
 ## Links
 
-- https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272
+- [IfLetStore and Effect cancellation on view disappear - Related Projects / Swift Composable Architecture - Swift Forums](https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272)
 
 ## License
 
