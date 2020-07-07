@@ -8,11 +8,11 @@ struct AppState: Equatable {
 enum AppAction {
     case presentDetail
     case dismissDetail
-    case detail(DetailAction)
+    case detail(LifecycleAction<DetailAction>)
 }
 
 let appReducer = Reducer<AppState, AppAction, Void>.combine(
-    detailReducer.optional.pullback(
+    detailReducer.pullback(
         state: \.detail,
         action: /AppAction.detail,
         environment: { _ in () }
