@@ -40,6 +40,10 @@ I don't think it's a bug in The Composable Architecture, I think it's rather mis
 
 The problem seems to be common, as it will be present whenever we send actions using `.onDisappear` view modifier, when the view is embedded in `IfLetStore` view. This concrete use case is probably a common one when implementing long-time-running effects that needs to be eventually canceled (when view disappears).
 
+## Links
+
+- https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272
+
 ## License
 
 Copyright © 2020 [Dariusz Rybicki Darrarski](http://www.darrarski.pl)
