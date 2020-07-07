@@ -13,6 +13,7 @@
 		3136F93E24B4D0D600A17C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3136F93D24B4D0D600A17C89 /* Assets.xcassets */; };
 		3136F94424B4D0D600A17C89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3136F94224B4D0D600A17C89 /* LaunchScreen.storyboard */; };
 		3136F94D24B4D25F00A17C89 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3136F94C24B4D25F00A17C89 /* ComposableArchitecture */; };
+		31F1C4F124B4D3CC0028825C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1C4F024B4D3CC0028825C /* Detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3136F93D24B4D0D600A17C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3136F94324B4D0D600A17C89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3136F94524B4D0D600A17C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31F1C4F024B4D3CC0028825C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3136F93B24B4D0D400A17C89 /* App.swift */,
 				3136F93724B4D0D400A17C89 /* AppDelegate.swift */,
 				3136F93D24B4D0D600A17C89 /* Assets.xcassets */,
+				31F1C4F024B4D3CC0028825C /* Detail.swift */,
 				3136F94524B4D0D600A17C89 /* Info.plist */,
 				3136F94224B4D0D600A17C89 /* LaunchScreen.storyboard */,
 				3136F93924B4D0D400A17C89 /* SceneDelegate.swift */,
@@ -144,6 +147,7 @@
 			files = (
 				3136F93824B4D0D400A17C89 /* AppDelegate.swift in Sources */,
 				3136F93A24B4D0D400A17C89 /* SceneDelegate.swift in Sources */,
+				31F1C4F124B4D3CC0028825C /* Detail.swift in Sources */,
 				3136F93C24B4D0D400A17C89 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
