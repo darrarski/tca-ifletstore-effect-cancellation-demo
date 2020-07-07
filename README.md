@@ -42,7 +42,7 @@ The problem seems to be common, as it will be present whenever we send actions u
 
 ## Links
 
-- https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272
+- [IfLetStore and Effect cancellation on view disappear - Related Projects / Swift Composable Architecture - Swift Forums](https://forums.swift.org/t/ifletstore-and-effect-cancellation-on-view-disappear/38272)
 
 ## License
 
