@@ -5,32 +5,28 @@ struct DetailState: Equatable {
     var time: Int = 0
 }
 
-enum DetailAction {
-    case startTimer
-    case stopTimer
+enum DetailAction: Equatable {
     case timerTicked
 }
 
+struct TimerId: Hashable {}
+
 let detailReducer = Reducer<DetailState, DetailAction, Void> { state, action, _ in
-    struct TimerId: Hashable {}
-
     switch action {
-    case .startTimer:
-        return Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: DispatchQueue.main)
-            .map { _ in DetailAction.timerTicked }
-
-    case .stopTimer:
-        return .cancel(id: TimerId())
-
     case .timerTicked:
         state.time += 1
         return .none
     }
-
 }
+.lifecycle(onAppear: {
+    Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: DispatchQueue.main)
+        .map { _ in DetailAction.timerTicked }
+}, onDisappear: {
+    .cancel(id: TimerId())
+})
 
 struct DetailView: View {
-    let store: Store<DetailState, DetailAction>
+    let store: Store<DetailState, LifecycleAction<DetailAction>>
 
     var body: some View {
         WithViewStore(store) { viewStore in
@@ -38,9 +34,9 @@ struct DetailView: View {
                 Text("Detail").font(.title)
                 Text("\(viewStore.time)")
             }.onAppear {
-                viewStore.send(.startTimer)
+                viewStore.send(.onAppear)
             }.onDisappear {
-                viewStore.send(.stopTimer)
+                viewStore.send(.onDisappear)
             }
         }
     }
