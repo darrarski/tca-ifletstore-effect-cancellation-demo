@@ -1,3 +1,4 @@
+import Combine
 import ComposableArchitecture
 import SwiftUI
 
@@ -19,7 +20,7 @@ let detailReducer = Reducer<DetailState, DetailAction, Void> { state, action, _ 
     }
 }
 .lifecycle(onAppear: {
-    CustomTimerPublisher()
+    Deferred { CustomTimerPublisher() }
         .map { _ in DetailAction.timerTicked }
         .eraseToEffect()
         .cancellable(id: TimerId(), cancelInFlight: true)
