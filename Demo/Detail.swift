@@ -19,8 +19,11 @@ let detailReducer = Reducer<DetailState, DetailAction, Void> { state, action, _ 
     }
 }
 .lifecycle(onAppear: {
-    Effect.timer(id: TimerId(), every: 1, tolerance: .zero, on: DispatchQueue.main)
+    CustomTimerPublisher()
         .map { _ in DetailAction.timerTicked }
+        .eraseToEffect()
+        .cancellable(id: TimerId(), cancelInFlight: true)
+
 }, onDisappear: {
     .cancel(id: TimerId())
 })
